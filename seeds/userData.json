@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+      "username": "Spongebob",
+      "email": "spongebob.squarepants@gmail.com",
+      "password": "password123"
+    },
+    {
+        "id": 2,
+        "username": "BettyBoo",
+        "email": "betty.boo@gmail.com",
+        "password": "password456"
+    },
+    {
+        "id": 3,
+        "username": "ScoobyDoo",
+        "email": "scooby.doo@gmail.com",
+        "password": "password789"
+    }
+  ]

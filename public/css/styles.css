@@ -1,0 +1,57 @@
+/* Body styles */
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: burlywood;
+    color: black;
+    margin: 0; 
+    padding: 0;
+}
+
+/* Style header */
+header {
+    margin-top: 0;
+    background-color: darkgreen;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: darkcyan;
+    color: #fff;
+}
+
+/* Hyperlink styles */
+a {
+    color: darkred;
+    text-decoration: none;
+}
+
+/* Hyperlink styles on hover */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style footer */
+footer {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    background-color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+
+}
+
+/* Style toggle button */
+#toggle-button {
+    padding: 10px;
+    background-color: burlywood;
+    border: none;
+    cursor: pointer;
+}

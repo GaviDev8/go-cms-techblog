@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Spongebob",
+      "title": "Learn how to code Javascript",
+      "description": "A syllabus on how to learn the fundamentals of coding javascript."
+    },
+    {
+      "name": "Betty",
+      "title": "The Ultimate Tech Quiz",
+      "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!"
+    },
+    {
+      "name": "Scooby",
+      "title": "What does responsible coding or AI even mean?",
+      "description": "The lack of adopting ethical AI in tech companies... AI systems have their own biases."
+    }
+  ]

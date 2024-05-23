@@ -4,19 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SOMETHING</title>
+  <title>Cafe y Chisme</title>
+  <link rel="stylesheet" href="/public/css/styles.css">
   {{!-- add links here for css --}}
+  
 </head>
 
 <body>
-      <!-- Add header here -->
+ <!-- Add header here -->
+      <header>
+        <h1>El Chisme 👩🏽‍💻</h1>
+        <button id="toggle-button">🚀 light mode/dark mode toggle</button>
+
+         {{#if loggedIn}}
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/logout" method="post">Logout</a></li>
+                {{else}}
+                <h2>Sign-in?</h2>
+                    <li><a href="/login">Login</a></li>
+                {{/if}}
+
+      </header>
       {{{ body }}}
     <footer>
       {{!-- add footer content --}}
+        <a href="https://gavidev8.github.io/go-portfolio/">Portfolio</a>
+        <a href="https://www.linkedin.com/in/gabrielaortizz/">LinkedIn</a>
     </footer>
-  </div>
-
+ {{#if logged_in}}
+      <script src='/public/js/logout.js'></script>
+    {{/if}}
+    
 {{!--  import main js--}}
+<script src="/public/js/login.js"></script>
+<script src="/public/js/signup.js"></script>
+<script src="/public/js/logout.js"></script>
+<script src="/public/js/addBlog.js"></script>
+<script src="/public/js/edit.js"></script>
+<script src="/public/js/comment.js"></script>
+<script src="/public/js/delete.js"></script>
 </body>
 
 </html>
