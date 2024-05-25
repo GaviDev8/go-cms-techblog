@@ -1,24 +1,22 @@
 const signupHandler = async (event) => {
     event.preventDefault();
 
-
-    const first_name = document.querySelector('#first_name').value.trim();
-    const last_name = document.querySelector('#last_name').value.trim();
-    const email = document.querySelector('#email').value.trim();
-    const password = document.querySelector('#password').value.trim();
+    const username = document.querySelector('#username-signup').value.trim();
+    const email = document.querySelector('#email-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
     
     const response = await fetch('/api/user', {
         method: "POST",
-        body: JSON.stringify({ email, first_name, last_name, password}),   
+        body: JSON.stringify({ username, email, password}),   
         headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
-        document.location.reload();
+        document.location.replace("/");
     } else {
         alert(response.statusText);
     }
 }
 
 
-const elementRegister = document.getElementById('register')
-if(elementRegister){elementRegister.addEventListener('click', signupHandler);}
+const elementRegister = document.querySelector('.signup-form')
+if(elementRegister){elementRegister.addEventListener('submit', signupHandler);}

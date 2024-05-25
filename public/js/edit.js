@@ -32,7 +32,7 @@ const updateHandler = async (event) => {
             headers: { "Content-Type": "application/json" },
         });
         if (response.ok) {
-            window.location.replace('/dashboard')
+            window.location.replace('/blog')
         } else {
             alert(response.statusText);
         }

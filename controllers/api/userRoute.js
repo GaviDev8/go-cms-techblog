@@ -6,13 +6,13 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
     try {
         const newUser = await User.create({
-            name: req.body.name,
+            username: req.body.username,
             email: req.body.email,
             password: req.body.password,
         });
         req.session.save(() => {
             req.session.userId = newUser.id;
-            req.session.name = newUser.name;
+            req.session.username = newUser.username;
             req.session.loggedIn = true;
 
             res.status(201).json(newUser);
@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
 // User login
 router.post('/login', async (req, res) => {
     try {
-        const user = await User.findOne({ where: { email: req.body.email } });
+        const user = await User.findOne({ where: { username: req.body.username } });
         if (!user || !user.checkPassword(req.body.password)) {
             res.status(401).json({ message: 'Incorrect email or password' });
             return;
@@ -38,6 +38,7 @@ router.post('/login', async (req, res) => {
             res.json({ user, message: 'You are now logged in!' });
         });
     } catch (error) {
+        console.log(error);
         res.status(500).json(error);
     }
 });
