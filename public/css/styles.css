@@ -23,9 +23,6 @@
     text-decoration: none;
   }
   
-  a:visited {
-    color: inherit;
-  }
   
   header {
     padding: 40px;
