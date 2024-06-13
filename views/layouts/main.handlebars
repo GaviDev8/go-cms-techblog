@@ -17,7 +17,7 @@
         <h1>El Chisme 👩🏽‍💻</h1>
          {{#if loggedIn}}
                     <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/logout" method="post">Logout</a></li>
+                    <button class="logout">Logout</button>
                 {{/if}}
 
       </header>
@@ -27,9 +27,9 @@
         <a href="https://gavidev8.github.io/go-portfolio/">Portfolio</a>
         <a href="https://www.linkedin.com/in/gabrielaortizz/">LinkedIn</a>
     </footer>
- {{#if logged_in}}
-      <script src='/public/js/logout.js'></script>
-    {{/if}}
+ {{!-- {{#if logged_in}} --}}
+      <script src='/js/logout.js'></script>
+    {{!-- {{/if}} --}}
 </body>
 
 </html>
