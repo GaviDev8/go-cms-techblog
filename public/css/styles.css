@@ -1,57 +1,214 @@
-/* Body styles */
-body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: burlywood;
-    color: black;
-    margin: 0; 
-    padding: 0;
-}
-
-/* Style header */
-header {
-    margin-top: 0;
-    background-color: darkgreen;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-
-}
-
-/* Dark mode styles */
-body.dark-mode {
-    background-color: darkcyan;
-    color: #fff;
-}
-
-/* Hyperlink styles */
-a {
-    color: darkred;
-    text-decoration: none;
-}
-
-/* Hyperlink styles on hover */
-a:hover {
-    text-decoration: underline;
-}
-
-/* Style footer */
-footer {
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    bottom: 0;
-    background-color: white;
-    padding: 10px 0;
+:root {
+    --primary: tan;
+    --secondary: #86938f;
+    --third: white;
+    --fourth: darkblue;
+    --dark: #182c23;
+    --error: rgb(228, 46, 1);
+    --border-radius: 0.3rem;
+  }
+  
+  body {
+    font-family: Arial;
+    margin: 0;
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    background-color: var(--fourth);
+  }
+  
+  a {
+    color: var(--dark);
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: inherit;
+  }
+  
+  header {
+    padding: 40px;
+    text-align: center;
+    background-color: #01010c;
+    color: #ffffff;
+    display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+  
+  header h1 {
+    color: beige;
+    background-image: linear-gradient(135deg, #c00b04 0%, #f35a01 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0px;
+    font-size: 30px;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  
+  aside {
+    flex: 0;
+    background-color: var(--third);
+    padding: 80px;
+    text-align: left;
+    color: var(--third);
+  }
+  
+  nav {
+    display: flex;
+    background-color: pink;
+  }
+  
+  nav a {
+    color: var(--third);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  nav a:hover {
+    color: red;
+    background-color: purple;
+  }
+  
+  .gallery {
+    flex: 4;
+    background-color: rgb(56, 56, 56);
+    padding: 50px;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
-    column-gap: 15px;
-
-}
-
-/* Style toggle button */
-#toggle-button {
-    padding: 10px;
-    background-color: burlywood;
+    align-items: center;
+  }
+  
+  .btn-no-style {
+    background: none;
     border: none;
+    padding: 0;
     cursor: pointer;
-}
+    text-decoration: none;
+    font-size: 100%;
+    transition: color 0.1s;
+    margin-left: 16px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .painting {
+    width: 50%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+  }
+  
+  .painting-details {
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+  
+  /* CARDS */
+  .card {
+    margin: 10px;
+    border: 7px double var(--dark);
+    border-radius: 10px;
+    background-color: var(--third);
+    color: var(--dark);
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 200px;
+    padding: 5px;
+    overflow-y: scroll;
+    flex: 1 1 50%;
+      position: relative;
+  }
+  
+  .card h2 {
+    font-size: 23px;
+    text-align: left;
+    border-bottom: 2px solid;
+  }
+  
+  .card p {
+    font-size: 15px;
+    margin-top: 10px;
+    height: 100px;
+    text-align: left;
+  }
+  
+  .card h3 {
+    font-size: 17px;
+  }
+  
+  .login-card {
+    margin: 0 0 20px 0;
+    flex: 0 0 50%;
+    width: 75vw;
+    padding: 5px;
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+    border-style: double;
+    border-width: thick;
+    background-color: pink;
+    color: rgb(110, 0, 0);
+  }
+  
+  .card header {
+    color: darkblue;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    background-color: pink;
+    padding: 0.625rem;
+    border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+  }
+  
+  .card-body {
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .gallery-name {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 5px var(--secondary);
+    border: 10px groove var(--third);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 100px;
+    padding-left: 350px;
+    text-align: center;
+  }
+  
+  /* LAYOUT */
+  .container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  
+  .login-signup {
+    font-size: 1rem;
+    color: purple;
+  }
+  
+  .dashboard {
+    margin: 20px;
+  }
+  
+  .post-id {
+    color: rgb(56, 56, 56);
+  }

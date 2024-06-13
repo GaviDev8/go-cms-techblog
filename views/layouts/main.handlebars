@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cafe y Chisme</title>
-  <link rel="stylesheet" href="/public/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
   {{!-- add links here for css --}}
   
 </head>
@@ -14,14 +15,9 @@
  <!-- Add header here -->
       <header>
         <h1>El Chisme 👩🏽‍💻</h1>
-        <button id="toggle-button">🚀 light mode/dark mode toggle</button>
-
          {{#if loggedIn}}
                     <li><a href="/dashboard">Dashboard</a></li>
                     <li><a href="/logout" method="post">Logout</a></li>
-                {{else}}
-                <h2>Sign-in?</h2>
-                    <li><a href="/login">Login</a></li>
                 {{/if}}
 
       </header>
@@ -34,9 +30,6 @@
  {{#if logged_in}}
       <script src='/public/js/logout.js'></script>
     {{/if}}
-    
-{{!--  import main js--}}
-{{!-- <script src="/public/js/logout.js"></script> --}}
 </body>
 
 </html>
